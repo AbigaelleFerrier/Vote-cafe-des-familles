@@ -8,9 +8,8 @@ function p(...$var) {
 }
 
 if(
-    !isset($_POST['id'])        &&
-    !isset($_POST['nom'])       &&
-    !isset($_POST['prenom'])    &&
+    !isset($_POST['id'])        ||
+    !isset($_POST['email'])     ||
     !isset($_POST['rgpd'])
 ) {
     die();
@@ -27,7 +26,7 @@ foreach( $propals as  &$propal) {
     }
 }
 
-$ligneCSV = $_POST['id'] .';'. $nom_vote .';'. $date .';'.  $_POST['nom'] .';'. $_POST['prenom'] .';'. $_POST['rgpd'] . '
+$ligneCSV = $_POST['id'] .';'. $nom_vote .';'. $date .';'. $_POST['email'] .';'. $_POST['rgpd'] . '
 ';
 
 file_put_contents('./vote.csv', $ligneCSV, FILE_APPEND);

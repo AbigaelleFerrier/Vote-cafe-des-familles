@@ -38,7 +38,7 @@ $propals = json_decode(file_get_contents('proposition.json'));
     <main class="d-flex flex-column p-5 w-auto">
         <div class="p-3 text-center card mt-3">
             <h1>Je Vote</h1>
-            <h2>pour le futur nom de ce lieu</h2>
+            <h2>Pour le futur nom de ce lieu</h2>
         </div>
 
         <div class="d-flex flex-wrap justify-content-between">
@@ -77,22 +77,12 @@ $propals = json_decode(file_get_contents('proposition.json'));
                                     <form action="/add-vote.php" method="POST">
                                         <input type="hidden" name="id" value="<?php echo $propal->ID; ?>">
                                         <div class="mb-3">
-                                            <label for="nom" class="form-label">Nom<span style="color:red">*</span></label>
+                                            <label for="email" class="form-label">Email<span style="color:red">*</span></label>
                                             <input
                                                 type="text"
                                                 class="form-control"
-                                                id="nom"
-                                                name="nom"
-                                                required
-                                            >
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="prenom" class="form-label">Prénom<span style="color:red">*</span></label>
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                id="prenom"
-                                                name="prenom"
+                                                id="email"
+                                                name="email"
                                                 required
                                             >
                                         </div>
@@ -102,7 +92,7 @@ $propals = json_decode(file_get_contents('proposition.json'));
                                                 class="form-check-label"
                                                 for="rgpd"
                                             >
-                                                Je consens à ce que mes données soit utilisé dans le cadre de ce vote <span style="color:red">*</span>
+                                                Je consens à ce que mes données soit utilisé dans le cadre de ce vote uniquement<span style="color:red">*</span>
                                             </label>
                                         </div>
                                         <button type="submit" class="btn btn-primary">Je vote</button>
@@ -126,9 +116,9 @@ $propals = json_decode(file_get_contents('proposition.json'));
         </div>
     </main>
 
-    <a href="">
-       Code source
-    </a>
+    <div class="d-flex text-align justify-content-center mb-5">
+        <a class="mx-2" style="color:white;" target="_blank" href="https://github.com/AbigaelleFerrier/Vote-cafe-des-familles">Code source</a>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
